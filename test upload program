@@ -1,0 +1,29 @@
+Module Module1
+    
+    Sub Main()
+        Dim lenght() As Integer
+        Dim list As Integer
+        Dim insert As Integer
+        Dim inner As Integer
+        Dim count As Integer
+        Dim temp As Integer
+        Dim outer As String
+
+        outer = lenght(list)
+        For count = 0 To lenght(list - 1)
+            lenght(count) = Console.ReadLine()
+        Next
+
+        For count = 0 To outer - 1
+            temp = lenght(count)
+            insert = count
+            While insert > 0 AndAlso list(insert - 1) >= temp
+                list(insert) = list(insert - 1)
+                insert = insert - 1
+            End While
+            list(insert) = temp
+        Next
+        Console.ReadKey()
+    End Sub
+
+End Module
